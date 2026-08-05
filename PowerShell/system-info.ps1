@@ -27,9 +27,15 @@ Write-Host "========================================" -ForegroundColor Cyan
 Write-Host " Windows System Information" -ForegroundColor Green
 Write-Host "========================================" -ForegroundColor Cyan
 
-$Computer = Get-CimInstance Win32_ComputerSystem
-$OS = Get-CimInstance Win32_OperatingSystem
-$CPU = Get-CimInstance Win32_Processor
+try {
+    $Computer = Get-CimInstance Win32_ComputerSystem -ErrorAction Stop
+    $OS = Get-CimInstance Win32_OperatingSystem -ErrorAction Stop
+    $CPU = Get-CimInstance Win32_Processor -ErrorAction Stop
+}
+catch {
+    Write-Host "Error: Unable to retrieve system information." -ForegroundColor Red
+    exit
+}
 
 Write-Host ""
 Write-Host "Computer Name : $env:COMPUTERNAME"
