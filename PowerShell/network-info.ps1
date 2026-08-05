@@ -30,16 +30,23 @@ Write-Host ""
 Write-Host "Computer Name: $env:COMPUTERNAME"
 Write-Host ""
 
-Write-Host "IP Configuration" -ForegroundColor Yellow
-Get-NetIPConfiguration
+try {
+    Write-Host ""
+    Write-Host "IP Configuration" -ForegroundColor Yellow
+    Get-NetIPConfiguration -ErrorAction Stop
 
-Write-Host ""
-Write-Host "DNS Servers" -ForegroundColor Yellow
-Get-DnsClientServerAddress |
-    Where-Object { $_.ServerAddresses } |
-    Select-Object InterfaceAlias, AddressFamily, ServerAddresses
+    Write-Host ""
+    Write-Host "DNS Servers" -ForegroundColor Yellow
+    Get-DnsClientServerAddress -ErrorAction Stop |
+        Where-Object { $_.ServerAddresses } |
+        Select-Object InterfaceAlias, AddressFamily, ServerAddresses
 
-Write-Host ""
-Write-Host "Network Adapters" -ForegroundColor Yellow
-Get-NetAdapter |
-    Select-Object Name, InterfaceDescription, Status, LinkSpeed
+    Write-Host ""
+    Write-Host "Network Adapters" -ForegroundColor Yellow
+    Get-NetAdapter -ErrorAction Stop |
+        Select-Object Name, InterfaceDescription, Status, LinkSpeed
+}
+catch {
+    Write-Host "Error: Unable to retrieve network information." -ForegroundColor Red
+    exit
+}
