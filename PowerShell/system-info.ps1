@@ -12,20 +12,13 @@ Collects information about the current computer including:
 - Installed RAM
 - Current Logged-in User
 
-.AUTHOR
-Nixon Bone
-
-.VERSION
-1.0
-
 .NOTES
+Author: Nixon Bone
+Version: 1.0
 Created as part of the Windows IT Support Toolkit.
 #>
 
 Clear-Host
-Write-Host "========================================" -ForegroundColor Cyan
-Write-Host " Windows System Information" -ForegroundColor Green
-Write-Host "========================================" -ForegroundColor Cyan
 
 try {
     $Computer = Get-CimInstance Win32_ComputerSystem -ErrorAction Stop
@@ -34,12 +27,13 @@ try {
 }
 catch {
     Write-Host "Error: Unable to retrieve system information." -ForegroundColor Red
-    exit
+    Write-Host $_.Exception.Message -ForegroundColor DarkRed
+    exit 1
 }
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "      Windows System Information" -ForegroundColor Green
+Write-Host " Windows System Information" -ForegroundColor Green
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
