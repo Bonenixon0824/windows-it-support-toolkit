@@ -92,7 +92,7 @@ windows-it-support-toolkit
 
 **Nixon Bone**
 
-Bachelor of Science in Information Technology (Cybersecurity)
+Bachelor of Science in Information Systems Technology (Cybersecurity)
 
 Interested in:
 
