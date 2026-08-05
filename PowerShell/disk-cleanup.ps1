@@ -20,3 +20,5 @@ foreach ($folder in $tempFolders) {
 
 Write-Host ""
 Write-Host "Disk cleanup completed." -ForegroundColor Green
+
+
