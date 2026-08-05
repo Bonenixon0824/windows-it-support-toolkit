@@ -32,3 +32,4 @@ catch {
     Write-Host "Error: Unable to retrieve Windows System event logs." -ForegroundColor Red
     exit
 }
+
