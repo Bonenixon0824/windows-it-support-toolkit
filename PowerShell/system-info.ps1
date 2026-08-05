@@ -1,6 +1,28 @@
-# Windows System Information Script
-# Author: Nixon Bone
+<#
+.SYNOPSIS
+Displays detailed Windows system information.
 
+.DESCRIPTION
+Collects information about the current computer including:
+- Computer Name
+- Manufacturer
+- Model
+- Windows Version
+- Processor
+- Installed RAM
+- Current Logged-in User
+
+.AUTHOR
+Nixon Bone
+
+.VERSION
+1.0
+
+.NOTES
+Created as part of the Windows IT Support Toolkit.
+#>
+
+Clear-Host
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host " Windows System Information" -ForegroundColor Green
 Write-Host "========================================" -ForegroundColor Cyan
