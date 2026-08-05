@@ -1,18 +1,40 @@
-# Installed Software Script
-# Author: Nixon Bone
+<#
+.SYNOPSIS
+Displays installed software on a Windows computer.
 
-Write-Host "========================================" -ForegroundColor Cyan
-Write-Host " Installed Software" -ForegroundColor Green
-Write-Host "========================================" -ForegroundColor Cyan
+.DESCRIPTION
+Queries the Windows registry to retrieve installed application names and versions.
 
-Get-ItemProperty `
-"HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*" `
--ErrorAction SilentlyContinue |
+.AUTHOR
+Nixon Bone
 
-Where-Object {$_.DisplayName} |
+.VERSION
+1.0
 
-Select-Object DisplayName, DisplayVersion |
+.NOTES
+Created as part of the Windows IT Support Toolkit.
+Results may vary depending on whether applications were installed for all users or only the current user.
+#>
 
-Sort-Object DisplayName |
+Clear-Host
+try {
+    Write-Host ""
+    Write-Host "Installed Software" -ForegroundColor Green
+    Write-Host ""
 
-Format-Table -AutoSize
+    $RegistryPaths = @(
+        "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*",
+        "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*",
+        "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*"
+    )
+
+    Get-ItemProperty $RegistryPaths -ErrorAction Stop |
+        Where-Object { $_.DisplayName } |
+        Select-Object DisplayName, DisplayVersion, Publisher |
+        Sort-Object DisplayName |
+        Format-Table -AutoSize
+}
+catch {
+    Write-Host "Error: Unable to retrieve installed software." -ForegroundColor Red
+    exit
+}
