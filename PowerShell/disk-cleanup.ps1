@@ -28,13 +28,23 @@ $tempFolders = @(
 )
 
 foreach ($folder in $tempFolders) {
-    if (Test-Path $folder) {
-        Write-Host "Cleaning $folder..." -ForegroundColor Yellow
-        Get-ChildItem $folder -Recurse -Force -ErrorAction SilentlyContinue |
-            Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+    try {
+        if (Test-Path $folder) {
+            Write-Host "Cleaning $folder..." -ForegroundColor Yellow
+
+            Get-ChildItem $folder -Recurse -Force -ErrorAction Stop |
+                Remove-Item -Force -Recurse -ErrorAction Stop
+
+            Write-Host "Successfully cleaned $folder." -ForegroundColor Green
+        }
+        else {
+            Write-Host "Folder not found: $folder" -ForegroundColor DarkYellow
+        }
+    }
+    catch {
+        Write-Host "Unable to fully clean $folder. Some files may be in use or require administrator access." -ForegroundColor Red
     }
 }
-
 Write-Host ""
 Write-Host "Disk cleanup completed." -ForegroundColor Green
 
