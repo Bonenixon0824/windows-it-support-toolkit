@@ -1,5 +1,22 @@
-# Windows Disk Cleanup Script
-# Author: Nixon Bone
+<#
+.SYNOPSIS
+Removes temporary Windows files to help free disk space.
+
+.DESCRIPTION
+Checks common Windows temporary-file locations and removes files that can be safely deleted.
+
+.AUTHOR
+Nixon Bone
+
+.VERSION
+1.0
+
+.NOTES
+Created as part of the Windows IT Support Toolkit.
+Administrator privileges may be required to clean some system folders.
+#>
+
+Clear-Host
 
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host " Windows Disk Cleanup" -ForegroundColor Green
