@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository showcases hands-on projects focused on Windows administration, PowerShell automation, networking, and common help desk troubleshooting scenarios.
+This repository showcases hands-on Windows administration, PowerShell automation, and IT support projects designed to demonstrate practical skills used in enterprise environments.
 
-The goal is to demonstrate practical technical skills used by IT Support Specialists, Technical Support Engineers, Desktop Support Technicians, and Systems Administrators.
+The toolkit includes PowerShell scripts for common administrative tasks, troubleshooting documentation, execution guides, and verified script demonstrations.
 
 ---
 
@@ -14,6 +14,7 @@ The goal is to demonstrate practical technical skills used by IT Support Special
 - [Repository Structure](#repository-structure)
 - [PowerShell Scripts](#powershell-scripts)
 - [Troubleshooting Guides](#troubleshooting-guides)
+- [Script Demonstrations](#script-demonstrations)
 - [Project Goals](#project-goals)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Technologies Used](#technologies-used)
@@ -25,7 +26,7 @@ The goal is to demonstrate practical technical skills used by IT Support Special
 
 ## Repository Structure
 
-```
+```text
 windows-it-support-toolkit/
 │
 ├── PowerShell/
@@ -39,13 +40,23 @@ windows-it-support-toolkit/
 │   └── README.md
 │
 ├── Troubleshooting/
-│   ├── printer-troubleshooting.md
-│   ├── bsod-troubleshooting.md
-│   ├── outlook-troubleshooting.md
-│   ├── internet-connectivity.md
+│   ├── WiFi-Troubleshooting.md
+│   ├── Printer-Troubleshooting.md
+│   ├── Windows-Update-Troubleshooting.md
+│   ├── Outlook-Troubleshooting.md
+│   ├── BSOD-Troubleshooting.md
+│   ├── Slow-Computer-Troubleshooting.md
+│   ├── Login-Account-Troubleshooting.md
 │   └── README.md
 │
 ├── Screenshots/
+│   ├── system-info.png
+│   ├── network-info.png
+│   ├── disk-cleanup.png
+│   ├── running-services.png
+│   ├── installed-software.png
+│   ├── event-log-review.png
+│   ├── windows-update-check.png
 │   └── README.md
 │
 ├── HOW-TO-RUN.md
@@ -55,58 +66,101 @@ windows-it-support-toolkit/
 
 ---
 
-## PowerShell Scripts
+# PowerShell Scripts
 
 📂 **Folder:** [`PowerShell`](./PowerShell)
 
-This repository includes PowerShell scripts commonly used in Windows administration and IT support.
+This repository includes PowerShell scripts commonly used by IT Support Specialists, Desktop Support Technicians, and Systems Administrators.
 
 | Script | Purpose |
 |---------|---------|
 | `system-info.ps1` | Displays Windows system information |
 | `network-info.ps1` | Displays network configuration details |
-| `disk-cleanup.ps1` | Removes temporary files |
-| `running-services.ps1` | Lists currently running Windows services |
-| `installed-software.ps1` | Displays installed applications |
-| `event-log-review.ps1` | Reviews recent Windows System events |
-| `windows-update-check.ps1` | Displays Windows Update service status |
+| `disk-cleanup.ps1` | Removes temporary Windows files |
+| `running-services.ps1` | Displays currently running Windows services |
+| `installed-software.ps1` | Lists installed software from the Windows Registry |
+| `event-log-review.ps1` | Displays recent Windows System events |
+| `windows-update-check.ps1` | Checks the Windows Update service status |
 
 ---
 
-## Troubleshooting Guides
+# Troubleshooting Guides
 
 📂 **Folder:** [`Troubleshooting`](./Troubleshooting)
 
-Documentation covering common IT support issues including:
+This repository also contains troubleshooting documentation covering common Windows support scenarios including:
 
-- Printer troubleshooting
-- Internet connectivity
-- Outlook troubleshooting
-- Blue Screen (BSOD) troubleshooting
+- Wi-Fi Connectivity
+- Printer Issues
+- Windows Update
+- Microsoft Outlook
+- Blue Screen (BSOD)
+- Slow Computer Performance
+- Login & Account Issues
 
 ---
 
-## Screenshots
+# Script Demonstrations
 
 📂 **Folder:** [`Screenshots`](./Screenshots)
 
-This folder will contain screenshots demonstrating the output of each PowerShell script after testing.
+The screenshots below demonstrate successful execution of the PowerShell scripts included in this project.
+
+## Windows System Information
+
+![System Information](./Screenshots/system-info.png)
 
 ---
 
-## Project Goals
+## Network Information
+
+![Network Information](./Screenshots/network-info.png)
+
+---
+
+## Running Windows Services
+
+![Running Services](./Screenshots/running-services.png)
+
+---
+
+## Installed Software
+
+![Installed Software](./Screenshots/installed-software.png)
+
+---
+
+## Windows Event Log Review
+
+![Event Log Review](./Screenshots/event-log-review.png)
+
+---
+
+## Windows Update Service Status
+
+![Windows Update](./Screenshots/windows-update-check.png)
+
+---
+
+## Disk Cleanup
+
+![Disk Cleanup](./Screenshots/disk-cleanup.png)
+
+---
+
+# Project Goals
 
 This project was created to:
 
 - Demonstrate Windows administration skills
 - Practice PowerShell scripting
-- Document common IT troubleshooting procedures
-- Build a professional GitHub portfolio
+- Build a professional IT portfolio
+- Document common help desk troubleshooting procedures
 - Showcase technical documentation skills
 
 ---
 
-## Skills Demonstrated
+# Skills Demonstrated
 
 - Windows Administration
 - PowerShell Automation
@@ -114,20 +168,20 @@ This project was created to:
 - Windows Services
 - Windows Registry
 - Event Viewer
-- Troubleshooting Methodology
+- System Diagnostics
+- Technical Troubleshooting
 - Technical Documentation
 - Git & GitHub
-- Problem Solving
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 - Windows 10 / Windows 11
-- PowerShell 5.1
+- Windows PowerShell 5.1
 - Windows Management Instrumentation (WMI/CIM)
-- Windows Services
 - Windows Registry
+- Windows Services
 - Event Viewer
 - Microsoft 365
 - Git
@@ -135,37 +189,36 @@ This project was created to:
 
 ---
 
-## Repository Status
+# Repository Status
 
 | Component | Status |
 |-----------|--------|
 | PowerShell Scripts | ✅ Complete |
 | Troubleshooting Guides | ✅ Complete |
 | Documentation | ✅ Complete |
-| Screenshots | 🚧 In Progress |
-| Future Enhancements | 🚧 Planned |
+| Screenshots | ✅ Complete |
+| Testing | ✅ Complete |
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-- Export PowerShell results to CSV
+- Export PowerShell reports to CSV
 - Generate HTML reports
 - Add logging functionality
 - Support command-line parameters
 - Expand troubleshooting documentation
-- Add screenshots demonstrating each script
 - Add additional Windows administration scripts
 
 ---
 
-## About Me
+# About Me
 
-Hi, I'm **Nixon Bone**, an IT professional with a background in technical support, networking, cybersecurity, and systems administration.
+Hi, I'm **Nixon Bone**.
 
-I'm passionate about building hands-on projects that demonstrate real-world IT skills while continuously expanding my knowledge of Windows administration, Microsoft technologies, PowerShell automation, Python, SQL, and cloud technologies.
+I hold a Bachelor of Science in Information Technology with a concentration in Cybersecurity and have professional experience in technical support. I enjoy building hands-on IT projects that demonstrate practical Windows administration, automation, troubleshooting, networking, and scripting skills.
 
-**Connect with me:**
+## Connect with Me
 
-- LinkedIn: https://linkedin.com/in/nixon-bone-6abab2374
-- GitHub: https://github.com/Bonenixon0824
+- **LinkedIn:** https://linkedin.com/in/nixon-bone-6abab2374
+- **GitHub:** https://github.com/Bonenixon0824
