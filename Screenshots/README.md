@@ -1,8 +1,8 @@
 # Screenshots
 
-This folder contains screenshots demonstrating the output of the PowerShell scripts included in this repository.
+This folder contains screenshots demonstrating the successful execution of the PowerShell scripts included in this repository.
 
-## Planned Screenshots
+## Included Screenshots
 
 - System Information
 - Network Information
@@ -12,4 +12,4 @@ This folder contains screenshots demonstrating the output of the PowerShell scri
 - Event Log Review
 - Windows Update Service Status
 
-These screenshots will be added after each script has been tested on a Windows system.
+Each screenshot was captured after testing the script on Windows PowerShell to verify successful execution and expected output.
