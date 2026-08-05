@@ -38,11 +38,20 @@ catch {
 }
 
 Write-Host ""
-Write-Host "Computer Name : $env:COMPUTERNAME"
-Write-Host "Manufacturer  : $($Computer.Manufacturer)"
-Write-Host "Model         : $($Computer.Model)"
-Write-Host "Operating Sys : $($OS.Caption)"
-Write-Host "Version       : $($OS.Version)"
-Write-Host "Processor     : $($CPU.Name)"
-Write-Host "RAM           : $([math]::Round($Computer.TotalPhysicalMemory / 1GB,2)) GB"
-Write-Host "Current User  : $env:USERNAME"
+Write-Host "========================================" -ForegroundColor Cyan
+Write-Host "      Windows System Information" -ForegroundColor Green
+Write-Host "========================================" -ForegroundColor Cyan
+Write-Host ""
+
+$SystemDetails = [PSCustomObject]@{
+    "Computer Name"    = $env:COMPUTERNAME
+    "Manufacturer"     = $Computer.Manufacturer
+    "Model"            = $Computer.Model
+    "Operating System" = $OS.Caption
+    "OS Version"       = $OS.Version
+    "Processor"        = $CPU.Name
+    "Installed RAM"    = "$([math]::Round($Computer.TotalPhysicalMemory / 1GB, 2)) GB"
+    "Current User"     = $env:USERNAME
+}
+
+$SystemDetails | Format-List
