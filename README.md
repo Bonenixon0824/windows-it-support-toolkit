@@ -1,36 +1,103 @@
 # Windows IT Support Toolkit
 
-## Overview
-
-This repository showcases Windows IT support projects, PowerShell scripts, troubleshooting guides, and documentation based on real-world IT support tasks.
-
-The goal of this repository is to demonstrate hands-on IT support skills used in help desk and desktop support environments.
+A collection of PowerShell scripts and troubleshooting guides demonstrating practical IT support skills used in enterprise Windows environments.
 
 ---
 
-## Skills
+## Overview
 
-- Windows 10 & Windows 11
-- Microsoft 365
-- Active Directory
-- Microsoft Intune
+This repository showcases hands-on projects focused on Windows administration, PowerShell automation, networking, and common help desk troubleshooting scenarios.
+
+The goal is to demonstrate practical technical skills used by IT Support Specialists, Technical Support Engineers, Desktop Support Technicians, and Systems Administrators.
+
+---
+
+# Repository Structure
+
+```
+windows-it-support-toolkit
+│
+├── PowerShell
+│   ├── System Information
+│   ├── Network Information
+│   ├── Disk Cleanup
+│   ├── Running Services
+│   ├── Installed Software
+│   ├── Event Log Review
+│   └── Windows Update Check
+│
+└── Troubleshooting
+    ├── Wi-Fi
+    ├── Printer
+    ├── Windows Update
+    ├── Outlook
+    ├── BSOD
+    ├── Slow Computer
+    └── Login & Account Issues
+```
+
+---
+
+# PowerShell Scripts
+
+| Script | Purpose |
+|---------|---------|
+| system-info.ps1 | Displays Windows system information |
+| network-info.ps1 | Displays network configuration |
+| disk-cleanup.ps1 | Cleans temporary Windows files |
+| running-services.ps1 | Lists running Windows services |
+| installed-software.ps1 | Displays installed software |
+| event-log-review.ps1 | Reviews recent Windows event logs |
+| windows-update-check.ps1 | Checks Windows Update service status |
+
+---
+
+# Troubleshooting Guides
+
+- Wi-Fi Connectivity
+- Printer Issues
+- Windows Update
+- Microsoft Outlook
+- Blue Screen (BSOD)
+- Slow Computer Performance
+- Login & Account Issues
+
+---
+
+# Skills Demonstrated
+
+- Windows 10 / Windows 11
 - PowerShell
-- Networking Fundamentals
+- Windows Administration
 - Technical Troubleshooting
+- Microsoft 365
+- Networking Fundamentals
+- System Diagnostics
 - Technical Documentation
 
 ---
 
-## Current Projects
+# Future Improvements
 
-- Windows System Information Script
-- Network Information Script
-- Disk Cleanup Script
-- Wi-Fi Troubleshooting Guide
-- Printer Troubleshooting Guide
+- Screenshot examples
+- HTML reporting
+- CSV exports
+- Error handling
+- Logging
+- Additional automation scripts
 
 ---
 
-## About Me
+# About Me
 
-I'm an IT Support professional with experience providing Tier 1 and Tier 2 technical support, troubleshooting Windows and macOS systems, Microsoft 365, networking, and enterprise technologies. This repository documents my hands-on learning and technical projects.
+**Nixon Bone**
+
+Bachelor of Science in Information Technology (Cybersecurity)
+
+Interested in:
+
+- IT Support
+- Technical Support Engineering
+- Systems Administration
+- Network Support
+- Data Analytics
